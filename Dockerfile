@@ -1,9 +1,8 @@
 FROM rockylinux:8
 
-LABEL org.opencontainers.image.source="https://github.com/stackhpc/slurm-docker-cluster" \
-      org.opencontainers.image.title="slurm-docker-cluster" \
-      org.opencontainers.image.description="Slurm Docker cluster on Rocky Linux 8" \
-      org.label-schema.docker.cmd="docker-compose up -d" \
+LABEL org.opencontainers.image.source="https://github.com/stackhpc/mpitests-container" \
+      org.opencontainers.image.title="mpitests-container" \
+      org.opencontainers.image.description="RockyLinux mpitests-* packages" \
       maintainer="StackHPC"
 
 RUN set -ex \
@@ -12,7 +11,6 @@ RUN set -ex \
     && dnf install -y dnf-plugins-core epel-release \
     && dnf install -y \
         git \
-        apptainer \
         python3.9 \
         mpitests-openmpi \
         mpitests-mvapich2 \
