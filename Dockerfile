@@ -12,9 +12,9 @@ RUN set -ex \
     && dnf install -y \
         git \
         python3.9 \
-        mpitests-openmpi \
+        mpitests-mpich \
         mpitests-mvapich2 \
         mpitests-mvapich2-psm2 \
-        mpitests-mvapich2 \
+        mpitests-openmpi \
     && dnf clean all \
     && rm -rf /var/cache/dnf
