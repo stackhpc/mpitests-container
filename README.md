@@ -15,6 +15,7 @@ Note the `mpitests-*` packages provide binaries for IMB, OMB and the relevant MP
 
 Example of running IMB-MPI1 pingpong using OpenMPI under Slurm using `srun` as the launcher:
 
+    #!/usr/bin/env bash
     #SBATCH -N2
     #SBATCH --ntasks-per-node=1
     MPI_CONTAINER_TAG="main"
